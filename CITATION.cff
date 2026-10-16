@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "If you use this software in your research, please cite both the paper and the version of the code you used."
+title: "CSpec: label-free cortical parcellation via Forman--Ricci curvature gating on the fsaverage5 surface"
+version: v2026-07-01-cgsd-brain-atlas
+date-released: 2026-07-01
+authors:
+  - family-names: Wang
+    given-names: Feifan
+    affiliation: "School of Artificial Intelligence, Xiamen Institute of Technology"
+    orcid: https://orcid.org/0000-0002-9525-0656
+license: MIT
+type: software
+repository-code: https://github.com/woodywff/cgsd_brain
+keywords:
+  - cortical parcellation
+  - Forman-Ricci curvature
+  - spectral clustering
+  - label-free
+  - single-CPU
+  - MRI
+  - FreeSurfer
+  - fsaverage5
+preferred-citation:
+  type: article
+  title: "CSpec: a label-free, single-CPU spectral method for cortical parcellation with the Forman--Ricci curvature gate"
+  journal: "Journal of Neuroscience Methods"
+  year: 2026
+  author:
+    - family-names: Wang
+      given-names: Feifan
+      orcid: https://orcid.org/0000-0002-9525-0656

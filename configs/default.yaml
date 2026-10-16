@@ -1,0 +1,35 @@
+# Default hyperparameters for CSpec (JNM submission).
+# Matches the §2.2 / §2.6 defaults reported in the paper.
+
+# CSpec algorithm (paper §2.2)
+cspec_only: true             # CSpec: raw 3-channel features + curvature-gated spectral.
+                             # If false, runs the legacy cgsd_brain MVP pipeline
+                             # (SheafDiffusion encoder + G3 curvature-spectral).
+k: 10                        # k-NN degree for the feature kNN graph (paper default).
+alpha: 1.0                   # curvature-gate sigmoid scale (paper default).
+sulcal_beta: 1.0             # β in build_sulcal_affinity (paper default).
+sulcal_k: 20                 # k-NN parameter for sulcal affinity (β-sweep setup).
+
+# Legacy cgsd_brain MVP (SheafDiffusion) — only used if cspec_only=false
+hidden_dim: 64
+n_heads: 2
+dropout: 0.3
+lr: 0.005
+weight_decay: 0.0005
+pretrain_epochs: 0
+struct_epochs: 30
+w_mod: 1.0
+w_col: 5.0
+w_rec: 1.0
+w_sulcal: 1.0
+w_sym: 0.0                  # MVP: disable hemisphere symmetry
+
+# Spectral clustering
+cluster_k: 10                # k-NN for the curvature-spectral embedding kNN graph.
+n_init_kmeans: 10            # K-Means restarts (paper default).
+
+# Curvature type for affinity reweighting
+curvature_type: forman       # "forman" or "ollivier"
+
+# Reproducibility
+seed: 0
